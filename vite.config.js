@@ -9,4 +9,18 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  define: {
+    'process.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL || 'https://jobfusion-backend-1.onrender.com')
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
+    },
+  },
 })
