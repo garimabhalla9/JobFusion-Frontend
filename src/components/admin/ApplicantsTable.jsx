@@ -83,5 +83,6 @@ const ApplicantsTable = () => {
         </div>
     )
 }
+// tanuuuuuuuuuu
 
 export default ApplicantsTable
